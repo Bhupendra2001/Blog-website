@@ -3,7 +3,7 @@ const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 const register = (req,res) =>{
 
-   // return res.json('hello from register')
+  
   //  check Existing user
 
   let username = req.body.username
@@ -15,11 +15,12 @@ const register = (req,res) =>{
   if(!email) return res.status(400).send("please give email")
   if(!sample.test(email)) return res.status(400).send("please give me valid email id")
   if(!password) return res.status(400).send("please give password")
+
     const  q = "SELECT * FROM user WHERE email = ? OR username = ?"
 
        db.query(q,[req.body.email, req.body.username], (err,data)=>{
-        if(err) return res.json(err);
-        if(data.length) return res.status(409).json("User already exits!");
+        if(err) return res.send(err);
+        if(data.length) return res.status(409).send("User already exits!");
 
 
         // Hash the password and create a user
@@ -48,6 +49,12 @@ const register = (req,res) =>{
   // check user
 
   const q = "SELECT * FROM user WHERE username = ?";
+
+  let username = req.body.username
+  let password = req.body.password
+
+  if(!username) return res.status(400).send("please enter the username")
+  if(!password) return res.status(400).send("please enter the password")
 
   db.query(q, [req.body.username], (err,data)=>{
     if(err) return res.json(err);
