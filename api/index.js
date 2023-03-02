@@ -3,8 +3,8 @@ const route = require('./routes/router')
 const Cp = require('cookie-parser')
 const app = express()
 const multer = require('multer')
-
-
+require("dotnev").config();
+const Port = process.env.PORT
 
 
 
@@ -14,6 +14,6 @@ app.use(Cp())
 app.use('/', route)
 
 
-app.listen(8800, ()=>{
-    console.log("mysql connected port 8800")
+app.listen(Port, ()=>{
+    console.log("mysql connected port " , Port)
 })
