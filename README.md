@@ -12,8 +12,8 @@ After login user can see diffrence type of blogs present in website and also use
 
 # Statement
 
-i    Create the user & Blog APIs.
-ii   Test the all  the APIs.
-iii  create the frontend or backend by the help of nodeJS , mysql, javascript, reactJS, express,html , css.
-iv   After created  both  the technologies connect to each others or run on the server.
-v    Used the mysql database for storing the data of user and post.
+(i)   Create the user & Blog APIs.
+(ii)   Test the all  the APIs.
+(iii)  create the frontend or backend by the help of nodeJS , mysql, javascript, reactJS, express,html , css.
+(iv)   After created  both  the technologies connect to each others or run on the server.
+(v)    Used the mysql database for storing the data of user and post.
