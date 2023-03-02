@@ -1,10 +1,11 @@
+require('dotenv').config()
+const Port = process.env.PORT
+console.log(Port)
 const express  =  require("express")
 const route = require('./routes/router')
 const Cp = require('cookie-parser')
 const app = express()
 const multer = require('multer')
-require("dotnev").config();
-const Port = process.env.PORT
 
 
 
@@ -15,5 +16,5 @@ app.use('/', route)
 
 
 app.listen(Port, ()=>{
-    console.log("mysql connected port " , Port)
+    console.log("mysql connected port number " , Port)
 })
