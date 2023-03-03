@@ -43,8 +43,8 @@ const register = (req, res) => {
     ];
 
     db.query(q, [values], (err, data) => {
-      if (err) return res.json(err);
-      return res.status(200).json('user has been created');
+      if (err) return res.send(err);
+      return res.status(200).send('user has been created');
     });
   });
 
@@ -63,7 +63,7 @@ const login = (req, res) => {
   if (!password) return res.status(400).send("please enter the password")
 
   db.query(q, [req.body.username], (err, data) => {
-    if (err) return res.json(err);
+    if (err) return res.send(err);
     if (data.length == 0) return res.status(404).json("User not found!")
 
     // check password
@@ -74,16 +74,16 @@ const login = (req, res) => {
     const { password, ...other } = data[0]
     res.cookie(cookies, token, {
       httpOnly: true
-    }).status(200).json(other)
+    }).status(200).send(other)
   })
 }
 
 const logout = (req, res) => {
-
+  
   res.clearCookie(cookies, {
     sameSite: "none",
     secure: true
-  }).status(200).json("User has been logged out")
+  }).status(200).send("User has been logged out")
 }
 
 module.exports = { register, login, logout }

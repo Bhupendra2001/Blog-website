@@ -1,6 +1,5 @@
 require('dotenv').config()
 const Port = process.env.PORT
-console.log(Port)
 const express  =  require("express")
 const route = require('./routes/router')
 const Cp = require('cookie-parser')

@@ -11,7 +11,7 @@ router.post('/api/auth/logout', logout)
 //-------------post--------------//
 router.post('/api/posts/test',addPost );
 router.get('/api/posts', getPosts);
-router.post('/api/posts/:id', getPost);
+router.get('/api/posts/:id', getPost);
 router.delete('/api/posts/:id', deletePost);
 router.put("/api/posts/:id", updatePost)
 
