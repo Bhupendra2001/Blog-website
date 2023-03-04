@@ -5,7 +5,7 @@ const router = express.Router()
 
 router.get('/', (req, res)=>{
     res.setHeader("Access-Control-Allow-Credentials","true");
-    res.send("Apis is running.. ");
+    res.send("Apis is running on the server ");
 })
 
 //-----------auth-----------------//
