@@ -34,6 +34,7 @@ const jwt = require('jsonwebtoken')
 
 
 const getPosts =  (req,res)=>{
+   res.setHeader("Access-Control-Allow-Credentials","true");
    const q = req.query.cat ? "SELECT * FROM  posts WHERE cat= ?" 
    : "SELECT * FROM  posts";
 
@@ -46,6 +47,7 @@ const getPosts =  (req,res)=>{
 
 
 const getPost =  (req,res)=>{
+   res.setHeader("Access-Control-Allow-Credentials","true");
    const q = " select title , descp, cat , img  , user.username from blog.posts INNER JOIN blog.user ON posts.uid = user.id where posts.id = ? ";
 
    db.query(q,[req.params.id], (err, data)=>{
@@ -57,6 +59,8 @@ const getPost =  (req,res)=>{
 
 
 const updatePost =  (req,res)=>{
+
+   res.setHeader("Access-Control-Allow-Credentials","true");
    const token = req.cookies.access_token
    if(!token) return res.status(401).send("Not authenticated !")
 
@@ -84,6 +88,8 @@ const updatePost =  (req,res)=>{
 
 
 const deletePost =  (req,res)=>{
+   res.setHeader("Access-Control-Allow-Credentials","true");
+
    const token = req.cookies.access_token
    if(!token) return res.status(401).send("Not authenticated !")
 
