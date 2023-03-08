@@ -8,8 +8,7 @@ const cookies = process.env.cookee
 
 
 const register = (req, res) => {
-  res.setHeader("Access-Control-Allow-Credentials","true");
-
+ 
   //  check Existing user
 
   let username = req.body.username
@@ -52,7 +51,6 @@ const register = (req, res) => {
 
 
 const login = (req, res) => {
-  res.setHeader("Access-Control-Allow-Credentials","true");
   // check user
 
   const q = "SELECT * FROM user WHERE username = ?";
@@ -80,8 +78,8 @@ const login = (req, res) => {
 }
 
 const logout = (req, res) => {
-  res.setHeader("Access-Control-Allow-Credentials","true");
-  res.clearCookie(cookies, {
+  
+   res.clearCookie(cookies, {
     sameSite: "none",
     secure: true
   }).status(200).send("User has been logged out")
