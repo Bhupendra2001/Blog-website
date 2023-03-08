@@ -43,7 +43,7 @@ const register = (req, res) => {
     ];
 
     db.query(q, [values], (err, data) => {
-      if (err) return res.send(err);
+      if (err) return res.status(400).send(err);
       return res.status(200).send('user has been created');
     });
   });

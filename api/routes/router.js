@@ -3,10 +3,10 @@ const {register,login, logout} = require('../controllers/auth')
 const { addPost,getPost, getPosts, updatePost,deletePost} = require('../controllers/post')
 const router = express.Router()
 
-router.get('/', (req, res)=>{
-    res.setHeader("Access-Control-Allow-Credentials","true");
-    res.send("Apis is running on the server ");
+router.get('/', (req,res)=>{
+    
 })
+
 
 //-----------auth-----------------//
 router.post('/api/auth/register' , register)

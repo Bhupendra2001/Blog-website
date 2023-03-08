@@ -41,6 +41,7 @@ const getPosts =  (req,res)=>{
    db.query(q,[req.query.cat], (err, data)=>{
     if(err) return res.send(err);
 
+    
     return res.status(200).send(data);
    })
 }
@@ -48,11 +49,13 @@ const getPosts =  (req,res)=>{
 
 const getPost =  (req,res)=>{
    res.setHeader("Access-Control-Allow-Credentials","true");
+   
    const q = " select title , descp, cat , img  , user.username from blog.posts INNER JOIN blog.user ON posts.uid = user.id where posts.id = ? ";
 
    db.query(q,[req.params.id], (err, data)=>{
     if(err) return res.send(err);
 
+    console.log(data[0])
       return res.status(200).send(data[0]);
    })
 }
