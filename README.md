@@ -20,7 +20,7 @@ After login user can create blog , get blog, and delete blog. Differnt type of b
 
  # Tables
 
- ## User  Table
+ - User  Table
 
 |Field|Type|Null|Key|Default|Extra |
 |---|---|---|---|---|---|
@@ -32,7 +32,7 @@ After login user can create blog , get blog, and delete blog. Differnt type of b
 
 
 
- ## Posts Table
+ - Posts Table
  
  
  | Field  | Type  | Null   |  Key  | Default | Extra |
@@ -53,17 +53,17 @@ After login user can create blog , get blog, and delete blog. Differnt type of b
 
 >POST  /api/auth/register
 
-Create a user - atleast 5 users
-Create a user document from request body.
-Return HTTP status 201 on a succesful user creation. Also return the user document. The response should be a JSON object like this
-Return HTTP status 400 if no params or invalid params received in request body. The response should be a JSON object like this
+1.Create a user - atleast 5 users
+2.Create a user document from request body.
+3.Return HTTP status 201 on a succesful user creation. Also return the user document. The response should be a JSON object like this
+4.Return HTTP status 400 if no params or invalid params received in request body. The response should be a JSON object like this
 
 
 
 >POST  /api/auth/login
-Allow an user to login with their email and password.
-On a successful login attempt return a JWT token contatining the userId, . The response should be a JSON object like this
-If the credentials are incorrect return a suitable error message with a valid HTTP status code. The response should be a JSON object like this
+1.Allow an user to login with their email and password.
+2.On a successful login attempt return a JWT token contatining the userId, . The response should be a JSON object like this
+3.If the credentials are incorrect return a suitable error message with a valid HTTP status code. The response should be a JSON object like this
 
 >POST /api/auth/logout
 Allow an user to logout the website and provide the login option.
