@@ -3,18 +3,18 @@
 
 # About
 
-This project is basis of blog website. I am created the two fearture of  project first  is user and second is post.
+This project is basis of `Blog Website`. I am created the two Tables of  project first  is user and second is posts.
 In this project basically i am created the user register and login page for the purpose of the authentication and authorisation.
 After login user can create blog , get blog, and delete blog. Differnt type of blogs present in website , also user can filter the blogs by the given categories.
 
 
 # Statement
 
-(i)   Create the user & Blog APIs.
-(ii)   Test the all  the APIs.
-(iii)  create the frontend or backend by the help of nodeJS , mysql, javascript, reactJS, express,html , css.
-(iv)   After created  both  the technologies connect to each others or run on the server.
-(v)    Used the mysql database for storing the data of user and post.
+-    Create the user & posts APIs.
+-    Test the all  the APIs.
+-    create the frontend or backend by the help of nodeJS , mysql, javascript, reactJS,  express,html , css.
+-    After created  both  the technologies connect to each others or run on the server.
+-    Used the mysql database for storing the data of user and post.
 
 
 
@@ -34,7 +34,7 @@ After login user can create blog , get blog, and delete blog. Differnt type of b
 
  - Posts Table
  
- ```yaml
+ 
  | Field  | Type  | Null   |  Key  | Default | Extra |
  |---|---|---|---|---|---|
  |'id' |'int' | 'NO' |'PRI' | NULL |'auto_increment'|
@@ -44,14 +44,14 @@ After login user can create blog , get blog, and delete blog. Differnt type of b
  |'date'  |  'datetime'  | 'YES' | '' | NULL|  ''   |
  |'uid'   |    'int'     | 'NO'  |'MUL'|NULL|  ''   |
  |'cat'   |'varchar(255)'| 'YES' | '' | NULL|  ''   |
- ```
+ 
 
 
 
 # User APIs
 
 
->POST  /api/auth/register
+>POST  `/api/auth/register`
 
 1.Create a user - atleast 5 users
 2.Create a user document from request body.
@@ -60,12 +60,14 @@ After login user can create blog , get blog, and delete blog. Differnt type of b
 
 
 
->POST  /api/auth/login
+>POST  `/api/auth/login`
+
 1.Allow an user to login with their email and password.
 2.On a successful login attempt return a JWT token contatining the userId, . The response should be a JSON object like this
 3.If the credentials are incorrect return a suitable error message with a valid HTTP status code. The response should be a JSON object like this
 
->POST /api/auth/logout
+>POST `/api/auth/logout`
+
 Allow an user to logout the website and provide the login option.
 
 
@@ -93,6 +95,8 @@ Allow an user to logout the website and provide the login option.
   message: ""
 }
 ```
+
+
 ##  MYSQL  Databse Collections
 ## user
 
@@ -100,6 +104,11 @@ Allow an user to logout the website and provide the login option.
 |---|---|---|---|---|
 |'8'| 'bhu42@gmail.com'| 'Bhupendra-Namdev'|'$2a$10$UJdmE0d1R9bRG.jGF82sJeBU9b0TL33/peLohIe.XCsI37/sPtetS'| NULL|
 
+## blog
+
+| id| title| descp| img| date| uid| cat|
+|---|---|---|---|---|---|---|
+|'1'| 'firste poste'| 'hello i am bhupendra'| 'https://cdn.pixabay.com/photo/2022/12/16/01/41/balloons-7658766__340.jpg'| NULL| '8'| 'art'|
 
 
 
