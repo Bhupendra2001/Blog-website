@@ -16,9 +16,11 @@ After login user can create blog , get blog, and delete blog. Differnt type of b
 (iv)   After created  both  the technologies connect to each others or run on the server.
 (v)    Used the mysql database for storing the data of user and post.
 
- Tables
 
- ##User  Table
+
+ # Tables
+
+ ## User  Table
 
 |Field|Type|Null|Key|Default|Extra |
 |---|---|---|---|---|---|
@@ -30,7 +32,7 @@ After login user can create blog , get blog, and delete blog. Differnt type of b
 
 
 
- ##Posts Table
+ ## Posts Table
  
  
  | Field  | Type  | Null   |  Key  | Default | Extra |
@@ -46,10 +48,10 @@ After login user can create blog , get blog, and delete blog. Differnt type of b
 
 
 
-User APIs
+# User APIs
 
 
-POST  /api/auth/register
+>POST  /api/auth/register
 
 Create a user - atleast 5 users
 Create a user document from request body.
@@ -58,12 +60,12 @@ Return HTTP status 400 if no params or invalid params received in request body. 
 
 
 
-POST  /api/auth/login
+>POST  /api/auth/login
 Allow an user to login with their email and password.
 On a successful login attempt return a JWT token contatining the userId, . The response should be a JSON object like this
 If the credentials are incorrect return a suitable error message with a valid HTTP status code. The response should be a JSON object like this
 
-POST /api/auth/logout
+>POST /api/auth/logout
 Allow an user to logout the website and provide the login option.
 
 
