@@ -19,15 +19,15 @@ After login user can create blog , get blog, and delete blog. Differnt type of b
  Tables
 
  User  Table
-______________________________________________________________________
-|    Field  |  Type        | Null  | Key  | Default | Extra          |
-|___________|______________|_______|______|_________|________________|
-| 'id'      | 'int',       | 'NO'  |'PRI' | NULL,   |'auto_increment'|
-|'email'    |'varchar(100)'| 'NO'  | ''   | NULL,   |   ''           |
-|'username' | 'varchar(25)'| 'NO'  | '',  | NULL,   |   ''           |
-|'password' |'varchar(100)'| 'NO'  | '',  | NULL,   |   ''           |
-|'img'      |'varchar(300)'| 'YES' | '',  | NULL,   |   ''           |
-|___________|______________|_______|______|_________|________________|
+
+|Field|Type|Null|Key|Default|Extra |
+|---|---|---|---|---|---|
+| 'id' | 'int' | 'NO' |'PRI' | NULL|'auto_increment'|
+|'email'    |'varchar(100)'| 'NO'  | '' | NULL  | ''|
+|'username' | 'varchar(25)'| 'NO'  | '' | NULL  | ''|
+|'password' |'varchar(100)'| 'NO'  | '' | NULL  | ''|
+|'img'      |'varchar(300)'| 'YES' | '' | NULL  | ''|
+
 
 
  Posts Table
