@@ -21,7 +21,7 @@ After login user can create blog , get blog, and delete blog. Differnt type of b
  # Tables
 
  - User  Table
-```yaml
+
 |Field|Type|Null|Key|Default|Extra |
 |---|---|---|---|---|---|
 | 'id' | 'int' | 'NO' |'PRI' | NULL|'auto_increment'|
@@ -29,7 +29,7 @@ After login user can create blog , get blog, and delete blog. Differnt type of b
 |'username' | 'varchar(25)'| 'NO'  | '' | NULL  | ''|
 |'password' |'varchar(100)'| 'NO'  | '' | NULL  | ''|
 |'img'      |'varchar(300)'| 'YES' | '' | NULL  | ''|
-```
+
 
 
  - Posts Table
@@ -95,12 +95,12 @@ Allow an user to logout the website and provide the login option.
 ```
 ##  MYSQL  Databse Collections
 ## user
-```yaml
+
 |id|email|username|password|img|
 |---|---|---|---|---|
 |'8'| 'bhu42@gmail.com'| 'Bhupendra-Namdev'|'$2a$10$UJdmE0d1R9bRG.jGF82sJeBU9b0TL33/peLohIe.XCsI37/sPtetS'| NULL|
 
-```
+
 
 
 
