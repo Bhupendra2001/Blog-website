@@ -21,7 +21,7 @@ After login user can create blog , get blog, and delete blog. Differnt type of b
  # Tables
 
  - User  Table
-
+```yaml
 |Field|Type|Null|Key|Default|Extra |
 |---|---|---|---|---|---|
 | 'id' | 'int' | 'NO' |'PRI' | NULL|'auto_increment'|
@@ -29,12 +29,12 @@ After login user can create blog , get blog, and delete blog. Differnt type of b
 |'username' | 'varchar(25)'| 'NO'  | '' | NULL  | ''|
 |'password' |'varchar(100)'| 'NO'  | '' | NULL  | ''|
 |'img'      |'varchar(300)'| 'YES' | '' | NULL  | ''|
-
+```
 
 
  - Posts Table
  
- 
+ ```yaml
  | Field  | Type  | Null   |  Key  | Default | Extra |
  |---|---|---|---|---|---|
  |'id' |'int' | 'NO' |'PRI' | NULL |'auto_increment'|
@@ -44,7 +44,7 @@ After login user can create blog , get blog, and delete blog. Differnt type of b
  |'date'  |  'datetime'  | 'YES' | '' | NULL|  ''   |
  |'uid'   |    'int'     | 'NO'  |'MUL'|NULL|  ''   |
  |'cat'   |'varchar(255)'| 'YES' | '' | NULL|  ''   |
- 
+ ```
 
 
 
@@ -68,6 +68,39 @@ After login user can create blog , get blog, and delete blog. Differnt type of b
 >POST /api/auth/logout
 Allow an user to logout the website and provide the login option.
 
+
+## Testing 
+- To test thes apis create a new collection in postman named Blog website 
+- Each api should have a new request in this collection
+- Each request in the collection should be rightly named. Eg  Create user , Create post, get post etc
+ 
+## Response
+
+### Successful Response structure
+```yaml
+{
+  status: true,
+  message: 'Success',
+  data: {
+
+  }
+}
+```
+### Error Response structure
+```yaml
+{
+  status: false,
+  message: ""
+}
+```
+##  MYSQL  Databse Collections
+## user
+```yaml
+|id|email|username|password|img|
+|---|---|---|---|---|
+|'8'| 'bhu42@gmail.com'| 'Bhupendra-Namdev'|'$2a$10$UJdmE0d1R9bRG.jGF82sJeBU9b0TL33/peLohIe.XCsI37/sPtetS'| NULL|
+
+```
 
 
 
