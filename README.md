@@ -18,7 +18,7 @@ After login user can create blog , get blog, and delete blog. Differnt type of b
 
  Tables
 
- User  Table
+ ##User  Table
 
 |Field|Type|Null|Key|Default|Extra |
 |---|---|---|---|---|---|
@@ -30,19 +30,19 @@ After login user can create blog , get blog, and delete blog. Differnt type of b
 
 
 
- Posts Table
+ ##Posts Table
  
- ______________________________________________________________________
- | Field  | Type          | Null   |  Key  | Default | Extra          |
- |________|_______________|________|_______|_________|________________|
- |'id'    |    'int'      | 'NO'   | 'PRI' | NULL    |'auto_increment'|
- |'title' |'varchar(255)' | 'NO'   | ''    | NULL    |    ''          |
- |'descp' |'varchar(1000)'| 'NO'   | ''    | NULL    |    ''          |
- |'img'   |varchar(255)'  |'NO'    | ''    | NULL    |    ''          |
- |'date'  |  'datetime'   | 'YES'  | ''    | NULL    |    ''          |
- |'uid'   |    'int'      | 'NO'   | 'MUL' | NULL    |    ''          |
- |'cat'   |'varchar(255)' | 'YES'  | ''    | NULL    |    ''          |
- |________|_______________|________|_______|_________|________________|
+ 
+ | Field  | Type  | Null   |  Key  | Default | Extra |
+ |---|---|---|---|---|---|
+ |'id' |'int' | 'NO' |'PRI' | NULL |'auto_increment'|
+ |'title' |'varchar(255)' | 'NO' | '' | NULL|  ''   |
+ |'descp' |'varchar(1000)'| 'NO' | '' | NULL|  ''   |
+ |'img'   |varchar(255)' |'NO'   | '' | NULL|  ''   |
+ |'date'  |  'datetime'  | 'YES' | '' | NULL|  ''   |
+ |'uid'   |    'int'     | 'NO'  |'MUL'|NULL|  ''   |
+ |'cat'   |'varchar(255)'| 'YES' | '' | NULL|  ''   |
+ 
 
 
 
