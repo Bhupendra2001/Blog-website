@@ -62,14 +62,45 @@ After login user can create blog , get blog, and delete blog. Differnt type of b
 
 >POST  `/api/auth/login`
 
-1.Allow an user to login with their email and password.
-2.On a successful login attempt return a JWT token contatining the userId, . The response should be a JSON object like this
-3.If the credentials are incorrect return a suitable error message with a valid HTTP status code. The response should be a JSON object like this
+- Allow an user to login with their email and password.
+- On a successful login attempt return a JWT token contatining the userId, . The response should be a JSON object like this
+- If the credentials are incorrect return a suitable error message with a valid HTTP status code. The response should be a JSON object like this
 
 >POST `/api/auth/logout`
 
 Allow an user to logout the website and provide the login option.
 
+
+# Blog APIs
+
+>POST `/api/posts`
+- Create a blog table from request body.Also store the userId in uid colum.
+- Given the all details about the blog after create th blog data in mysql.
+- Return HTTP status 201 on a successful blog creation.Also return the blog data.
+- Create atleast 10 blogs for each user
+- Return HTTP status 400 for an invalid request with a response body like [this](#Error Response structure)
+
+
+>GET `/api/posts`
+- Return all blogs in the MySQL posts table With status code 200 on successful fetch data 
+like [this](#Response of postman)
+- Also return blog data by different -different categories.
+- If no data found in table return with status code 400 data not found like [this](#Error Response structure)
+
+>Get `/api/posts/:id`
+- Return blog data that matches the given id in path params with status code 201 on successful
+fetch data.
+-If any Errr so return Error message with status code 400 in response like [this](# Error Response structure)
+
+>PUT `/api/posts/:id` 
+- Return updated blog in MySQL database for successful updation but before updation check only which 
+user are update blog that user are create post not any one.
+- If any Error return with valid status code in response.
+
+>DELETE `/api/posts/:id`
+- Delete the blog in database by given id in path params also check before deletion that post
+are matches the current user or not.
+- After match return successfull deletion message in response.
 
 ## Testing 
 - To test thes apis create a new collection in postman named Blog website 
