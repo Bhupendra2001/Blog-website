@@ -83,19 +83,21 @@ Allow an user to logout the website and provide the login option.
 
 >GET `/api/posts`
 - Return all blogs in the MySQL posts table With status code 200 on successful fetch data 
-like [this](#Response of postman)
+like [this](#response-ofpostman)
 - Also return blog data by different -different categories.
-- If no data found in table return with status code 400 data not found like [this](### Error Response structure)
+- If no data found in table return with status code 400 data not found like [this](#error-response-structure)
 
->Get `/api/posts/:id`
+>GET `/api/posts/:id`
 - Return blog data that matches the given id in path params with status code 201 on successful
 fetch data.
--If any Errr so return Error message with status code 400 in response like [this](#Error Response structure)
+-If any Errr so return Error message with status code 400 in response like [This](#error-response-structure)
+
 
 >PUT `/api/posts/:id` 
 - Return updated blog in MySQL database for successful updation but before updation check only which 
 user are update blog that user are create post not any one.
 - If any Error return with valid status code in response.
+
 
 >DELETE `/api/posts/:id`
 - Delete the blog in database by given id in path params also check before deletion that post
