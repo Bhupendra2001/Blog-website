@@ -4,6 +4,7 @@ const key = process.env.Secret
 const {db} = require('../db')
 const jwt = require('jsonwebtoken')
 
+
  const addPost =  (req,res)=>{
    const token = req.cookies.access_token
    if(!token) return res.status(401).send("Not authenticated !")
@@ -11,11 +12,11 @@ const jwt = require('jsonwebtoken')
    jwt.verify(token ,key , (err, userinfo)=>{
       if(err) return res.status(403).send("Token is not valid!")
    
-   const q = "INSERT INTO posts(`title`, `desc`, `img` , `cat`, `date` ,`uid` ) VALUES (?)"
+   const q = "INSERT INTO posts(`title`, `descp`, `img` , `cat`, `date` ,`uid` ) VALUES (?)"
     
    const values = [
       req.body.title,
-      req.body.desc,
+      req.body.descp,
       req.body.img,
       req.body.cat,
       req.body.date,
@@ -34,7 +35,7 @@ const jwt = require('jsonwebtoken')
 
 
 const getPosts =  (req,res)=>{
-   res.setHeader("Access-Control-Allow-Credentials","true");
+  
    const q = req.query.cat ? "SELECT * FROM  posts WHERE cat= ?" 
    : "SELECT * FROM  posts";
 
@@ -42,20 +43,20 @@ const getPosts =  (req,res)=>{
     if(err) return res.send(err);
 
     
-    return res.status(200).send(data);
+    return res.status(200).send( data);
    })
 }
 
 
 const getPost =  (req,res)=>{
-   res.setHeader("Access-Control-Allow-Credentials","true");
+ 
    
-   const q = " select title , descp, cat , img  , user.username from blog.posts INNER JOIN blog.user ON posts.uid = user.id where posts.id = ? ";
+   const q = " select  title , descp, cat , posts.img  , user.username, posts.id from blog.posts INNER JOIN blog.user ON posts.uid = user.id where posts.id = ? ";
 
    db.query(q,[req.params.id], (err, data)=>{
     if(err) return res.send(err);
 
-    console.log(data[0])
+  
       return res.status(200).send(data[0]);
    })
 }
@@ -63,7 +64,7 @@ const getPost =  (req,res)=>{
 
 const updatePost =  (req,res)=>{
 
-   res.setHeader("Access-Control-Allow-Credentials","true");
+ 
    const token = req.cookies.access_token
    if(!token) return res.status(401).send("Not authenticated !")
 
@@ -71,11 +72,12 @@ const updatePost =  (req,res)=>{
       if(err) return res.status(403).send("Token is not valid!")
    
       const postId = req.params.id
-    const q = "UPDATE posts  SET `title`=?, `desc`=?, `img`=? , `cat`=?, WHERE `id` = ? AND `uid` = ? ";
+      console.log(postId)
+    const q = "UPDATE posts  SET `title`=?, `descp`=?, `img`=? , `cat`=?, WHERE `id` = ? AND `uid` = ? ";
     
    const values = [
       req.body.title,
-      req.body.desc,
+      req.body.descp,
       req.body.img,
       req.body.cat,
       
@@ -91,8 +93,7 @@ const updatePost =  (req,res)=>{
 
 
 const deletePost =  (req,res)=>{
-   res.setHeader("Access-Control-Allow-Credentials","true");
-
+  
    const token = req.cookies.access_token
    if(!token) return res.status(401).send("Not authenticated !")
 
@@ -105,7 +106,7 @@ const deletePost =  (req,res)=>{
       db.query(q, [postId, userinfo.id], (err, data)=>{
          if(err) return res.status(403).send("you can delete only your post!")
          
-         return res.json("post has been deleted!");
+         return res.send("post has been deleted!");
       })
    })
 }

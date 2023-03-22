@@ -7,9 +7,10 @@ const cookies = process.env.cookee
 
 
 
-const register = (req, res) => {
+const register =   (req, res) => {
  
   //  check Existing user
+  try{
 
   let username = req.body.username
   let email = req.body.email
@@ -41,18 +42,23 @@ const register = (req, res) => {
 
     ];
 
-    db.query(q, [values], (err, data) => {
+   db.query(q, [values], (err, data) => {
       if (err) return res.status(400).send(err);
-      return res.status(200).send('user has been created');
+      return res.status(201).send('user has been created');
     });
   });
+
+}catch(err)
+{
+  return res.status(500).send({"Server Error" : err.message})
+}
 
 }
 
 
 const login = (req, res) => {
-  // check user
-
+  // check user 
+  try{
   const q = "SELECT * FROM user WHERE username = ?";
 
   let username = req.body.username
@@ -75,6 +81,10 @@ const login = (req, res) => {
       httpOnly: true
     }).status(200).send(other)
   })
+}
+catch(err){
+  return res.status(500).send({status : false , "Server Error" : err.message})
+}
 }
 
 const logout = (req, res) => {
