@@ -111,5 +111,102 @@ Allow an user to logout the website and provide the login option.
 |'1'| 'firste poste'| 'hello i am bhupendra'| 'https://cdn.pixabay.com/photo/2022/12/16/01/41/balloons-7658766__340.jpg'| NULL| '8'| 'art'|
 
 
+# Response of postman
+```yaml
+[
+  {
+    "id": 1,
+    "title": "firste poste",
+    "descp": "hello i am bhupendra",
+    "img": "https://cdn.pixabay.com/photo/2022/12/16/01/41/balloons-7658766__340.jpg",
+    "date": null,
+    "uid": 8,
+    "cat": "art"
+  },
+  {
+    "id": 2,
+    "title": "Second poste",
+    "descp": "hello i am harsh",
+    "img": "https://w0.peakpx.com/wallpaper/200/546/HD-wallpaper-stylish-sushant-is-wearing-white-shirt-in-black-background-sushant-singh-rajput-thumbnail.jpg",
+    "date": null,
+    "uid": 4,
+    "cat": "cinema"
+  },
+  {
+    "id": 3,
+    "title": "third poste",
+    "descp": "hello i am rahul ",
+    "img": "https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "date": null,
+    "uid": 7,
+    "cat": "science"
+  },
+  {
+    "id": 4,
+    "title": "forth poste",
+    "descp": "hello i am shivam",
+    "img": "https://images.pexels.com/photos/883757/pexels-photo-883757.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "date": null,
+    "uid": 5,
+    "cat": "design"
+  },
+  {
+    "id": 5,
+    "title": "fifth poste",
+    "descp": "hello i am dellep",
+    "img": "https://images.pexels.com/photos/1025804/pexels-photo-1025804.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "date": null,
+    "uid": 12,
+    "cat": "food"
+  },
+  {
+    "id": 6,
+    "title": "new food poste",
+    "descp": "hello i am bhupendra",
+    "img": "https://images.pexels.com/photos/3304057/pexels-photo-3304057.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "date": null,
+    "uid": 8,
+    "cat": "food"
+  },
+  {
+    "id": 7,
+    "title": "new art poste",
+    "descp": "hello i am rahul",
+    "img": "https://images.pexels.com/photos/39348/musician-trumpet-metal-snowman-39348.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "date": null,
+    "uid": 7,
+    "cat": "art"
+  },
+  {
+    "id": 8,
+    "title": "new design poste",
+    "descp": "hello  i am dellep",
+    "img": "https://cdn.pixabay.com/photo/2023/01/07/08/41/leaves-7702829__340.jpg",
+    "date": null,
+    "uid": 12,
+    "cat": "design"
+  },
+  {
+    "id": 9,
+    "title": "new cinema poste",
+    "descp": "hello i am rahul",
+    "img": "https://media.gettyimages.com/id/499345857/photo/1999-portrait-of-akshay-kumar.jpg?s=612x612&w=0&k=20&c=tki4YfvSFzJ5pu1hprWxxl8tbAv8J3NKiKwGys2ni8k=",
+    "date": null,
+    "uid": 7,
+    "cat": "cinema"
+  },
+  {
+    "id": 10,
+    "title": "new cinema pics",
+    "descp": "hello i am shivam",
+    "img": "https://media.gettyimages.com/id/526571308/photo/bollywood-actor-shraddha-kapoor-during-an-exclusive-interview-with-ht-cafe-for-an-upcoming.jpg?s=612x612&w=0&k=20&c=OCVET1RaNO9PXgZ_-WAfLJYPrVmYW5nnojNZN1768As=",
+    "date": null,
+    "uid": 5,
+    "cat": "cinema"
+  },
+
+  
+]
+```
 
 
