@@ -78,19 +78,19 @@ Allow an user to logout the website and provide the login option.
 - Given the all details about the blog after create th blog data in mysql.
 - Return HTTP status 201 on a successful blog creation.Also return the blog data.
 - Create atleast 10 blogs for each user
-- Return HTTP status 400 for an invalid request with a response body like [this](#Error Response structure)
+- Return HTTP status 400 for an invalid request with a response body like [this](### Error Response structure)
 
 
 >GET `/api/posts`
 - Return all blogs in the MySQL posts table With status code 200 on successful fetch data 
 like [this](#Response of postman)
 - Also return blog data by different -different categories.
-- If no data found in table return with status code 400 data not found like [this](#Error Response structure)
+- If no data found in table return with status code 400 data not found like [this](### Error Response structure)
 
 >Get `/api/posts/:id`
 - Return blog data that matches the given id in path params with status code 201 on successful
 fetch data.
--If any Errr so return Error message with status code 400 in response like [this](# Error Response structure)
+-If any Errr so return Error message with status code 400 in response like [this](#Error Response structure)
 
 >PUT `/api/posts/:id` 
 - Return updated blog in MySQL database for successful updation but before updation check only which 
