@@ -1,12 +1,14 @@
 const mysql = require('mysql2')
+require('dotenv').config()
 
+let pass = process.env.Pass
 
 
 
 const db = mysql.createPool({
     host : "localhost",
     user : "root",
-    password : "Sahil@123",
+    password : pass,
     database : "blog"
 })
 
