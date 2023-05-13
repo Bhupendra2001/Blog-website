@@ -78,7 +78,7 @@ Allow an user to logout the website and provide the login option.
 - Given the all details about the blog after create th blog data in mysql.
 - Return HTTP status 201 on a successful blog creation.Also return the blog data.
 - Create atleast 10 blogs for each user
-- Return HTTP status 400 for an invalid request with a response body like [this](### Error Response structure)
+- Return HTTP status 400 for an invalid request with a response body like [this](#Error-Response-structure)
 
 
 >GET `/api/posts`
